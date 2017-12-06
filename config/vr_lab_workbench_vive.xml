@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<Cluster masterAddress="127.0.0.1">
+  
+  <Node address="127.0.0.1" port="20401">
+    <Window fullscreen="true" border="false" monitor="1" numberOfSamples="4">
+      <Stereo type="side_by_side" />
+      <Pos x="0" y="0" />
+      <Size x="1920" y="1080" />
+      <Viewport tracked="true">
+        <Pos x="0.0" y="0.0" />
+        <Size x="1.0" y="1.0" />
+        <Viewplane>-0.68 -0.375 -0.50
+          <Pos x="-0.68" y="-0.375" z="-0.5" />
+          <Pos x="-0.68" y=" 0.375" z="-0.5" />
+          <Pos x=" 0.68" y=" 0.375" z="-0.5" />
+        </Viewplane>
+      </Viewport>
+    </Window>
+  </Node>
+  
+  <Node address="127.0.0.2" port="20402">
+    <Window fullscreen="false">
+      <Stereo type="none" />
+      <Pos x="0" y="0" />
+      <Size x="1024" y="1024" />
+      <Viewport user="topUser"><!-- Top View -->
+        <Pos  x="0.0" y="0.5" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x="-1.0" y=" 0.0" z=" 1.0" /><!-- Lower left -->
+          <Pos x="-1.0" y=" 0.0" z="-1.0" /><!-- Upper left -->
+          <Pos x=" 1.0" y=" 0.0" z="-1.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+      <Viewport user="frontUser"><!-- Front View -->
+        <Pos  x="0.0" y="0.0" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x="-1.0" y="-1.0" z=" 0.0" /><!-- Lower left -->
+          <Pos x="-1.0" y=" 1.0" z=" 0.0" /><!-- Upper left -->
+          <Pos x=" 1.0" y=" 1.0" z=" 0.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+      <Viewport user="rightUser"><!-- Right View -->
+        <Pos  x="0.5" y="0.0" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x=" 0.0" y="-1.0" z=" 1.0" /><!-- Lower left -->
+          <Pos x=" 0.0" y=" 1.0" z=" 1.0" /><!-- Upper left -->
+          <Pos x=" 0.0" y=" 1.0" z="-1.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+    </Window>
+  </Node>
+  
+  <User eyeSeparation="0.060">
+    <Pos x="0.0" y="0.0" z="1.0" />
+    <Tracking tracker="Vive-Head" device="Head" />
+  </User>
+  <User name="topUser">
+    <Pos x="0.0" y="2.0" z="0.0" />
+  </User>
+  <User name="frontUser">
+    <Pos x="0.0" y="0.0" z="2.0" />
+  </User>
+  <User name="rightUser">
+    <Pos x="2.0" y="0.0" z="0.0" />
+  </User>
+  
+  <Tracker name="Vive-Wand">
+    <Device name="Wand">
+      <Sensor id="0" vrpnAddress="openvr/controller/LHR-FFAF7B46@itn-vrhmd-01.ad.liu.se" />
+      <Buttons count="3" vrpnAddress="openvr/controller/LHR-FFAF7B46@itn-vrhmd-01.ad.liu.se" />
+      <Axes count="3" vrpnAddress="openvr/controller/LHR-FFAF7B46@itn-vrhmd-01.ad.liu.se" />
+    </Device>
+    <Matrix x0=" 0.351704 " y0=" 0.0166206" z0=" 0.935964 " w0="-0.798792"
+            x1="-0.0205672" y1=" 0.999738 " z1="-0.0100246" w1="-0.77563 "
+            x2="-0.935885 " y2="-0.0157244" z2=" 0.351954 " w2=" 2.80971 "
+            x3=" 0        " y3=" 0        " z3=" 0        " w3=" 1       " />
+  </Tracker>
+
+  <Tracker name="Vive-Head">
+    <Device name="Head">
+      <Sensor id="0" vrpnAddress="openvr/tracker/LHR-1BDC55AF@itn-vrhmd-01.ad.liu.se" />
+      <Offset x="0" y="-0.05" z="0.2" />
+    </Device>
+    <Matrix x0=" 0.351704 " y0=" 0.0166206" z0=" 0.935964 " w0="-0.798792"
+            x1="-0.0205672" y1=" 0.999738 " z1="-0.0100246" w1="-0.77563 "
+            x2="-0.935885 " y2="-0.0157244" z2=" 0.351954 " w2=" 2.80971 "
+            x3=" 0        " y3=" 0        " z3=" 0        " w3=" 1       " />
+  </Tracker>
+  
+</Cluster>
+
+<!--
+
+screenLowerLeft = -0.68 -0.375 -0.50
+screenUpperRight = 0.68 0.375 -0.50
+connectionString = openvr/tracker/LHR-1BDC55AF@itn-vrhmd-01.ad.liu.se
+
+orientationPreCalibration = -0.997976 -0.0114762 -0.062555 -2.04916
+(quaterion: 0.852767 0.00980637 0.053453 0.519458)
+orientationPostCalibration = 0.00304442 -0.999798 0.0198628 -1.21141
+
+offset = -0.016189 0.169183 0.141735
+
+positionCalibration=
+0.351704 0.0166206 0.935964 -0.798792
+-0.0205672 0.999738 -0.0100246 -0.77563
+-0.935885 -0.0157244 0.351954 2.80971
+0 0 0 1
+
+-->

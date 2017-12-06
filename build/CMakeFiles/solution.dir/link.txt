@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11    CMakeFiles/solution.dir/main.cpp.o  -o ../solution -rdynamic -Wl,-Bstatic -lsgct -Wl,-Bdynamic -losgUtil -losgDB -losgGA -losgViewer -losg -lOpenThreads -lGL -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lpthread -ldl 

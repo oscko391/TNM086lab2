@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Cluster masterAddress="127.0.0.1">
+  
+	<Node address="127.0.0.1" port="20401">
+		<Window fullscreen="false">
+			<Stereo type="none" />
+			<Pos x="0" y="0" />
+			<!-- 16:9 aspect ratio -->
+			<Size x="960" y="540" />
+			<Viewport>
+				<Pos x="0.0" y="0.0" />
+				<Size x="1.0" y="1.0" />
+				<Viewplane>
+					<!-- Lower left -->
+					<Pos x="-0.84914" y="-0.5495" z="-0.235" />
+					<!-- Upper left -->
+					<Pos x="-0.84914" y="0.4135" z="-0.235" />
+					<!-- Upper right -->
+					<Pos x="0.84114" y="0.4135" z="-0.235" />
+				</Viewplane>
+			</Viewport>
+		</Window>
+	</Node>
+  
+	<Node address="127.0.0.2" port="20402">
+		<Window fullscreen="false">
+			<Stereo type="none" />
+			<Pos x="0" y="0" />
+			<!-- 16:9 aspect ratio -->
+			<Size x="960" y="540" />
+			<Viewport>
+				<Pos x="0.0" y="0.0" />
+				<Size x="1.0" y="1.0" />
+				<Viewplane>
+					<!-- Lower left -->
+					<Pos x="-0.84914" y="-0.5495" z="-0.235" />
+					<!-- Upper left -->
+					<Pos x="-0.84914" y="0.4135" z="-0.235" />
+					<!-- Upper right -->
+					<Pos x="0.84114" y="0.4135" z="-0.235" />
+				</Viewplane>
+			</Viewport>
+		</Window>
+	</Node>
+
+	<User eyeSeparation="0.06">
+		<Pos x="0.0" y="0.15" z="1.5" />
+	</User>
+	<Tracker name="H3D-Wand">
+		<Device name="Wand">
+			<Sensor id="0" vrpnAddress="H3D@localhost" />
+      <Buttons count="1" vrpnAddress="H3D@localhost" />
+		</Device>
+		<Matrix x0="10.0"	y0="0.0"	z0="0.0"	w0="0.0"
+				    x1="0.0"	y1="10.0"	z1="0.0"	w1="0.0"
+				    x2="0.0"	y2="0.0"	z2="10.0"	w2="0.0"
+				    x3="0.0"	y3="0.0"	z3="0.0"	w3="1.0" />
+	</Tracker>
+</Cluster>
